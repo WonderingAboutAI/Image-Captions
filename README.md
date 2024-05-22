@@ -25,12 +25,15 @@ Captions along with the filenames are stored in a list of dictionaries.
 ### Output to CSV
 Finally, the data is compiled into a pandas DataFrame and exported to a CSV file, making it easy to review and utilize the generated captions.
 
-## Best Practices and Security Reminder:
+## Best Practices and Security Reminder
 The script uses a .env file to securely manage sensitive information, specifically the OpenAI API key. It is crucial to ensure that your .env file is properly configured with the OPENAI_API_KEY variable set to your key. This file should not be shared or included in version-controlled repositories to avoid exposing your API key.
 
 **Reminder:** Always store API keys and sensitive information in environment variables or secure configuration files like .env to minimize the risk of exposure and to comply with best security practices.
 
 ## A word about rate limits
+if you're planning to create captions for a very large number of images with a new OpenAI account, you may exceed rate limits for the API. Rate limits exist to manage the load on the infrastructure powering AI models. If you exceed them, you'll get an error message like "Too many requests" or "Rate limit error."
+
+See OpenAI's documentation for more information on rate limits and how you can manage processing in your scripts to avoid exceeding them: <https://everyday-experiments-with-ai.ghost.io/ghost/#/site>
 
 ## Summary
 This script can save you time if you need to caption nnumerous images for whatever reason. You can adjust the prompt to specify a word count and tone of voice that's most appropriate for your project.
