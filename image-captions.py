@@ -2,7 +2,6 @@ import os
 import base64
 from PIL import Image
 import io
-import openai
 import pandas as pd
 from dotenv import load_dotenv
 from openai import OpenAI
