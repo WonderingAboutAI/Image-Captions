@@ -19,7 +19,8 @@ After resizing and compression, images are converted into a base64 string format
 It uses the OpenAI API to generate captions for each processed image using the GPT-4-Turbo model with Computer Vision. The API is called with a base64 encoded image, and the script expects to receive text describing  the image content. Any issues in caption generation due to API errors are logged.
 
 ```
-Always store API keys and sensitive information in environment variables or secure configuration files like .env to minimize the risk of exposure and to comply with best security practices.
+Always store API keys and sensitive information in environment variables or secure configuration files like .env to minimize the risk of
+exposure and to comply with best security practices.
 ```
 
 ### Data Storage
@@ -31,7 +32,7 @@ Finally, the data is compiled into a pandas DataFrame and exported to a CSV file
 ## A word about rate limits
 if you're planning to create captions for a very large number of images with a new OpenAI account, you may exceed rate limits for the API. Rate limits exist to manage the load on the infrastructure powering AI models. If you exceed them, you'll get an error message like "Too many requests" or "Rate limit error."
 
-See OpenAI's documentation for more information on rate limits and how you can manage processing in your scripts to avoid exceeding them: 
+See OpenAI's documentation for more information on rate limits and how you can manage processing in your scripts to avoid exceeding them: https://platform.openai.com/docs/guides/rate-limits
 
 ## Summary
-This script can save you time if you need to caption nnumerous images for whatever reason. You can adjust the prompt to specify a word count and tone of voice that's most appropriate for your project.
+This script can save you time if you need to caption numerous images for whatever reason. You can adjust the prompt to specify a word count and tone of voice that's most appropriate for your project.
